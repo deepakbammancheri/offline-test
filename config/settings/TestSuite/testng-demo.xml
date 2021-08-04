@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="FlightBooking">
+
+    <parameter name="pageUrl" value="https://blazedemo.com/"/>  
+    <parameter name="browser" value="chrome"/> 
+
+
+	<test verbose="3" name="com.apisel.qa.selenium.flightbooking"
+		preserve-order="true">
+		<classes>
+			<class
+				name="com.apisel.qa.selenium.flightbooking.FlightBookingTest">
+				<methods>
+					<include name="verifySourceAndDestination" />
+					<include name="verifyAllChooseButton" />
+					<include name="verifyFlightBooking" />
+				</methods>
+
+			</class>
+			<class
+				name="com.apisel.qa.api.SpaceXAPITest">
+				<methods>
+					<include name="getSpaceXDetailsTest" />
+					<include name="spaceXNameTest" />
+				</methods>
+
+			</class>
+		</classes>
+	</test>
+
+
+
+
+
+</suite>
