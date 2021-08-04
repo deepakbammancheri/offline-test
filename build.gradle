@@ -95,13 +95,13 @@ test{
     	jvmArgs project.gradle.startParameter.systemPropertiesArgs.entrySet().collect{"-D${it.key}=${it.value}"}
         useDefaultListeners = true
         /*Accept the file using the property below.
-        eg. gradle clean build -PtestngSettingsFilePath=config/fwgui/TestSuite/testng-demo.xml
+        eg. gradle clean build -PtestngSettingsFilePath=config/settings/TestSuite/testng-demo.xml
         */
 		if (project.hasProperty("testngSettingsFilePath")){
             suites (testngSettingsFilePath)
 		}
         else{
-            suites ("config/fwgui/TestSuite/testng-demo.xml")
+            suites ("config/settings/TestSuite/testng-demo.xml")
         }
     }
 }
